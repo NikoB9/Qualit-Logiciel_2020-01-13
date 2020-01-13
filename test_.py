@@ -9,12 +9,12 @@ def test_ajouter():
 	assert ajouter(2,4)       == True
 	assert ajouter(2,2)       == True
 	assert ajouter(0, 0)      == True
+	assert ajouter(3, 0)      == True
 	# Faux 
 	assert ajouter(1.2, 1)    == False
 	assert ajouter(1, 2.0)    == False
 	assert ajouter(1.3, 2.0)  == False
 	assert ajouter(2/3, 1/2)  == False
-	assert ajouter(2/0, 1)    == False
 
 
 def test_vider():
@@ -75,7 +75,7 @@ def test_sommer():
 	assert sommer() != -1
 	# Test 5 
 	ajouter(-2,-3)
-	assert sommer() = -4
+	assert sommer() == -4
 
 
 
