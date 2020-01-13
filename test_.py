@@ -9,6 +9,7 @@ def test_ajouter():
 	assert ajouter(2,4)       == True
 	assert ajouter(2,2)       == True
 	assert ajouter(0, 0)      == True
+	assert ajouter(3, 0)      == True
 	# Faux 
 	assert ajouter(1.2, 1)    == False
 	assert ajouter(1, 2.0)    == False
