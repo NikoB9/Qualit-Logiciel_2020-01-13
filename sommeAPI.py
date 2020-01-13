@@ -27,7 +27,7 @@ def supprimer(a,b):
 
 
 def vider():
-	tab = []
+	tab[:] = []
 
 def sommer():
 	v = 0 
