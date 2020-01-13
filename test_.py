@@ -15,7 +15,6 @@ def test_ajouter():
 	assert ajouter(1, 2.0)    == False
 	assert ajouter(1.3, 2.0)  == False
 	assert ajouter(2/3, 1/2)  == False
-	assert ajouter(2/0, 1)    == False
 
 
 def test_vider():
