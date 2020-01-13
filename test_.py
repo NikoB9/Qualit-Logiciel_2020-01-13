@@ -82,14 +82,6 @@ def test_sommer():
 	ajouter(1,0)
 	assert sommer() == 6
 	assert sommer() != 5
-	# Test 4 
-	vider()
-	ajouter(-2,3)
-	assert sommer() == 1
-	assert sommer() != -1
-	# Test 5 
-	ajouter(-2,-3)
-	assert sommer() == -4
 
 
 
