@@ -17,7 +17,7 @@ def test_ajouter():
 
 	#Faux : + 10 elements
 	vider()
-	for i in range (9):
+	for i in range (10):
 		assert ajouter(0, 0)  == True
 	assert ajouter(0, 0) == False
 
