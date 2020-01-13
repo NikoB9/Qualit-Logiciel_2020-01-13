@@ -1,7 +1,7 @@
 tab = []
 
 def ajouter(a,b):
-	if(isinstance(a, int) and isinstance(b, int)):
+	if(isinstance(a, int) and isinstance(b, int) and len(tab)<10 and a >= 0 and b >= 0 and a+b<=10) :
 		tab.append((a,b))
 		return True
 	else : 
