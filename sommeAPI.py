@@ -8,9 +8,12 @@ def ajouter(a,b):
 		return False
 
 def supprimer(a,b):
+	existsInTab = False
 	for item in tab: 
-		if(item != (a,b)):
-			return False
+		if(item == (a,b)):
+			existsInTab = True
+	if(existsInTab == False): 
+		return False
 	tableau1 = tab
 	tab.remove((a,b))
 	tableau2 = tab
@@ -35,7 +38,7 @@ def vider():
 def sommer():
 	v = 0 
 	for i in range(len(tab)):
-		v = v + tab[i]
+		v = v + tab[i][0] + tab[i][1]
 	return v
 
 
