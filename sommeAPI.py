@@ -2,7 +2,7 @@ tab = []
 
 def ajouter(a,b):
 	if(isinstance(a, int) and isinstance(b, int)):
-		tab.append(a,b)
+		tab.append((a,b))
 		return True
 	else : 
 		return False
