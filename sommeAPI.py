@@ -8,6 +8,9 @@ def ajouter(a,b):
 		return False
 
 def supprimer(a,b):
+	for item in tab: 
+		if(item != (a,b)):
+			return False
 	tableau1 = tab
 	tab.remove((a,b))
 	tableau2 = tab
