@@ -10,7 +10,21 @@ def test_ajouter():
 	assert ajouter(2,2)       == True
 	assert ajouter(0, 0)      == True
 	assert ajouter(3, 0)      == True
-	# Faux 
+
+	# Somme elements <= 10
+	assert ajouter(9, 1) == True
+	assert ajouter(10, 1) == False
+
+	#Faux : + 10 elements
+	vider()
+	for i in range (9):
+		assert ajouter(0, 0)  == True
+	assert ajouter(0, 0) == False
+
+	#Faux valeurs positives ou nules
+	assert ajouter(-10, 0) == False
+
+	# Faux Pas entiers
 	assert ajouter(1.2, 1)    == False
 	assert ajouter(1, 2.0)    == False
 	assert ajouter(1.3, 2.0)  == False
