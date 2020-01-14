@@ -1,5 +1,5 @@
-from sommeAPI import ajouter, sommer, vider, supprimer
-import sommeAPI
+from operationsPartie import ajouter, sommer, vider, supprimer
+import operationsPartie
 
 # Exceptions : 
 # 		La vérification syntaxique est effectuée par Flake8
@@ -113,7 +113,5 @@ def test_sommer():
 	assert sommer() != 64
 	# Somme avec règle strike
 	assert sommer() == 71
-
-
 
 
