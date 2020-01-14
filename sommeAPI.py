@@ -35,13 +35,15 @@ def supprimer(a,b):
 def vider():
 	tab[:] = []
 
-def sommer():
-	v = 0 
-	for i in range(len(tab)):
-		v = v + tab[i][0] + tab[i][1]
-	return v
-
-
-
+def sommer(): 
+	v = 0  
+	for i in range(len(tab)): 
+		valeurAjouter = tab[i][0] + tab[i][1] 
+		if(i+1<len(tab)): 
+			if( (tab[i][0] + tab[i][1]) == 10): 
+				valeurAjouter += tab[i+1][0] 
+				pass 
+		v = v + valeurAjouter 
+	return v 
 	
 	
