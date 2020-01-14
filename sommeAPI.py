@@ -45,5 +45,3 @@ def sommer():
 				pass 
 		v = v + valeurAjouter 
 	return v 
-	
-	
