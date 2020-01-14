@@ -75,13 +75,33 @@ def test_sommer():
 	# Test 1 
 	vider()
 	assert sommer() == 0
+
 	# Test 2
 	ajouter(2,3)
 	assert sommer() == 5
+
 	# Test 3
 	ajouter(1,0)
 	assert sommer() == 6
 	assert sommer() != 5
+
+	#SPARE
+	#test 4 : ajout d'un couple dont sa somme vaut 10
+	ajouter(5, 5)
+	assert sommer() == 16
+	#ajouter un nouveau couple, le précédent valant 10, il va falloir rajouter le premier éléments en plus du couple à la somme
+	ajouter(3, 6)
+	assert sommer() == 28
+	assert sommer() != 25
+
+	# test 5 : reprise test 4
+	ajouter(6, 4)
+	assert sommer() == 38
+	ajouter(2, 5)
+	assert sommer() == 47
+	assert sommer() != 45
+
+	#STRIKE
 
 
 
