@@ -33,16 +33,16 @@ def test_ajouter():
 
 def test_vider():
 	ajouter(2,3)
-	assert len(sommeAPI.tab) != 0
+	assert len(operationsPartie.tab) != 0
 	vider()
-	assert len(sommeAPI.tab) == 0
+	assert len(operationsPartie.tab) == 0
 
 def test_supprimer():
 	# Test 1 : Vérifier taille tableau en cas de succès suppression
 	ajouter(2,3)
-	l = len(sommeAPI.tab)
+	l = len(operationsPartie.tab)
 	assert supprimer(2,3) == True
-	m = len(sommeAPI.tab)
+	m = len(operationsPartie.tab)
 	assert m == l-1
 	# Test 2 : vérifier qu'il renvoit faut si tableau vide 
 	vider()
@@ -51,9 +51,9 @@ def test_supprimer():
 	ajouter(2,3)
 	ajouter(1,3)
 	ajouter(3,3)
-	tableau1 = sommeAPI.tab
+	tableau1 = operationsPartie.tab
 	supprimer(3,3)
-	tableau2 = sommeAPI.tab
+	tableau2 = operationsPartie.tab
 	j = 0
 	for i in range(len(tableau1)):
 		x = tableau1[i]
@@ -66,9 +66,9 @@ def test_supprimer():
 	# Test 4 : vérifier qu'il ne supprime rien si valeur non présente 
 	vider()
 	ajouter(1,42)
-	tableau = sommeAPI.tab
+	tableau = operationsPartie.tab
 	supprimer(1,1)
-	assert tableau == sommeAPI.tab
+	assert tableau == operationsPartie.tab
 
 
 def test_sommer(): 
