@@ -43,7 +43,7 @@ def sommer():
 			if(tab[i][0] == 10): 
 				valeurAjouter += tab[i+1][0] + tab[i+1][1] 
 				pass 
-			else if( (tab[i][0] + tab[i][1]) == 10): 
+			elif( (tab[i][0] + tab[i][1]) == 10): 
 				valeurAjouter += tab[i+1][0] 
 				pass 
 		v = v + valeurAjouter 
