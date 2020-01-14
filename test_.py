@@ -85,23 +85,34 @@ def test_sommer():
 	assert sommer() == 6
 	assert sommer() != 5
 
-	#SPARE
-	#test 4 : ajout d'un couple dont sa somme vaut 10
+	# SPARE
+	# Test 4 : ajout d'un couple dont sa somme vaut 10
 	ajouter(5, 5)
 	assert sommer() == 16
-	#ajouter un nouveau couple, le précédent valant 10, il va falloir rajouter le premier éléments en plus du couple à la somme
+	# Ajouter un nouveau couple, le précédent valant 10, il va falloir rajouter le premier éléments en plus du couple à la somme
 	ajouter(3, 6)
 	assert sommer() == 28
 	assert sommer() != 25
 
-	# test 5 : reprise test 4
+	# Test 5 : reprise test 4
 	ajouter(6, 4)
 	assert sommer() == 38
 	ajouter(2, 5)
-	assert sommer() == 47
+	# Somme avant règle spare
 	assert sommer() != 45
+	# Somme avec règle spare
+	assert sommer() == 47
 
-	#STRIKE
+	# STRIKE
+	# Test 6 : ajout d'un nouveau couple dont le premier element vaut 10
+	ajouter(10, 0)
+	assert sommer() == 57
+	# Avec l'ajout d'un nouveau couple on doit ajouter à la somme basique une autre fois la somme des éléments du couple
+	ajouter(2, 5)
+	# Somme avant règle strike
+	assert sommer() != 64
+	# Somme avec règle strike
+	assert sommer() == 71
 
 
 
