@@ -48,3 +48,11 @@ def sommer():
 				pass 
 		v = v + valeurAjouter 
 	return v 
+
+# Demande à l'utilisateur un entier et vérifie que l'entier est entre 0 et 10 
+# Boucler tant que la valeur n'est pas un entier entre 0 et 10 
+# Renvoie l'entier retenu sinon renvoi 
+def saisieEntier(): 
+	valeur = -1
+	while(valeur <0 or valeur >10 ): 
+		valeur = int(input())
