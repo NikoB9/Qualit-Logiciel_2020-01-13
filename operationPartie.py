@@ -54,5 +54,5 @@ def sommer():
 # Renvoie l'entier retenu sinon renvoi 
 def saisieEntier(): 
 	valeur = -1
-	while(valeur <0 or valeur >10): 
+	while(valeur <0 or valeur >10 ): 
 		valeur = int(input())
