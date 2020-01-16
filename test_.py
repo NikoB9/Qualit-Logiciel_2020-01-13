@@ -1,5 +1,6 @@
 from operationsPartie import ajouter, sommer, vider, supprimer
 import operationsPartie
+import jeu
 
 # Exceptions : 
 # 		La vérification syntaxique est effectuée par Flake8
