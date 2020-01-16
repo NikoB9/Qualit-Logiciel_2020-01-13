@@ -114,4 +114,10 @@ def test_sommer():
 	# Somme avec règle strike
 	assert sommer() == 71
 
-
+def test_jeu():
+	# Test 1 : On simule 9 lancés à "(3,3)" et le dernier un spare (5,5) => extra : (3)  
+	assert jeu(1) == 67
+	# Test 2 : On simule 9 lancés à "(3,3)" et le dernier un strike (10,0) => extra : (3,3)
+	assert jeu(2) == 70
+	# Test 3 : On simule 10 lancés à "(3,3)" 
+	assert jeu(3) == 60
