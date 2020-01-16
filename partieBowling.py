@@ -1,4 +1,5 @@
-from operationsPartie import ajouter, sommer, saisieEntier
+import operationsPartie
+from operationsPartie import ajouter, sommer, saisieEntier, vider
 
 '''
 Explication du mode :
@@ -26,7 +27,7 @@ def jeu(mode) :
         ajouter(lancer1,lancer2)
 
     #dernier tour
-    print("Tour : " + str(tour))
+    print("Tour : 10")
     print("Entrez le score de votre premier lancer")
     if not mode:
         lancer1 = saisieEntier()
@@ -61,6 +62,7 @@ def jeu(mode) :
         else :
             lancerStrike2 = 3
         print("Score final : " + str(sommer() + lancerStrike1 + lancerStrike2))
+        vider()
         return sommer() + lancerStrike1 + lancerStrike2
     elif(lancer1 + lancer2 == 10):
         print("SPARE : relancez une nouvelle fois")
@@ -70,7 +72,9 @@ def jeu(mode) :
         else :
             lancerSpare = 3
         print("Score final : " + str(sommer() + lancerSpare))
+        vider()
         return sommer() + lancerSpare
     else:
         print("Score de ce tour : " + str(sommer()))
+        vider()
         return sommer()
