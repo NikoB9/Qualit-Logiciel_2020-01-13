@@ -9,6 +9,7 @@ mode == 2 : test avec des valeurs automatisées et un strike à la fin
 mode == 3 : test avec des valeurs automatisées (3 pour chaque lancer)
 '''
 def jeu(mode) :
+    vider()
     print("Début de la partie")
     #9 premiers tours
     for tour in range(1,10):
@@ -62,7 +63,6 @@ def jeu(mode) :
         else :
             lancerStrike2 = 3
         print("Score final : " + str(sommer() + lancerStrike1 + lancerStrike2))
-        vider()
         return sommer() + lancerStrike1 + lancerStrike2
     elif(lancer1 + lancer2 == 10):
         print("SPARE : relancez une nouvelle fois")
@@ -72,9 +72,7 @@ def jeu(mode) :
         else :
             lancerSpare = 3
         print("Score final : " + str(sommer() + lancerSpare))
-        vider()
         return sommer() + lancerSpare
     else:
         print("Score de ce tour : " + str(sommer()))
-        vider()
         return sommer()

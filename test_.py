@@ -117,11 +117,8 @@ def test_sommer():
 
 def test_jeu():
 	# Test 1 : On simule 9 lancés à "(3,3)" et le dernier un spare (5,5) => extra : (3)
-	vider()
 	assert jeu(1) == 67
 	# Test 2 : On simule 9 lancés à "(3,3)" et le dernier un strike (10,0) => extra : (3,3)
-	vider()
 	assert jeu(2) == 70
 	# Test 3 : On simule 10 lancés à "(3,3)"
-	vider()
 	assert jeu(3) == 60
