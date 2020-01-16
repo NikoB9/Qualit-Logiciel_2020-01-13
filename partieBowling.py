@@ -5,7 +5,7 @@ Explication du mode :
 mode == 0 : jeu normal avec demande de saisie au joueur
 mode == 1 : test avec des valeurs automatisées et un spare à la fin
 mode == 2 : test avec des valeurs automatisées et un strike à la fin
-mode == 3 : test avec des valeurs automatisées (3 pour chaque lancé)
+mode == 3 : test avec des valeurs automatisées (3 pour chaque lancer)
 '''
 def jeu(mode) :
     print("Début de la partie")
